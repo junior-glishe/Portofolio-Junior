@@ -1018,5 +1018,90 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
     <script src="formulaire.js"></script>
+    <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Récupération des éléments
+    const swiperContainer = document.querySelector('.project-swiper');
+    const swiperWrapper = swiperContainer.querySelector('.swiper-wrapper');
+    const allSlides = Array.from(document.querySelectorAll('.swiper-slide')); // tous les slides originaux
+    const filterButtons = document.querySelectorAll('[data-filter]');
+    
+    let swiper = null;
+
+    // Fonction d'initialisation de Swiper
+    function initSwiper() {
+      // Détruire l'ancienne instance si elle existe
+      if (swiper) {
+        swiper.destroy(true, true);
+      }
+      
+      // Créer une nouvelle instance
+      swiper = new Swiper('.project-swiper', {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        loop: false,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        breakpoints: {
+          640: { slidesPerView: 1 },
+          768: { slidesPerView: 2 },
+          1024: { slidesPerView: 3 },
+        },
+      });
+    }
+
+    // Fonction de filtrage
+    function filterProjects(filterValue) {
+      // Vider le wrapper
+      swiperWrapper.innerHTML = '';
+
+      // Filtrer les slides
+      const slidesToShow = allSlides.filter(slide => {
+        const category = slide.getAttribute('data-category');
+        return filterValue === 'all' || category === filterValue;
+      });
+
+      // Ajouter les slides filtrés dans le wrapper
+      slidesToShow.forEach(slide => {
+        swiperWrapper.appendChild(slide.cloneNode(true)); // cloner pour éviter les références
+      });
+
+      // Réinitialiser Swiper avec les nouveaux slides
+      initSwiper();
+
+      // Optionnel : réactiver AOS sur les nouveaux slides
+      if (typeof AOS !== 'undefined') {
+        AOS.refresh();
+      }
+    }
+
+    // Gestionnaires d'événements sur les boutons de filtre
+    filterButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        const filterValue = this.getAttribute('data-filter');
+
+        // Mise à jour de l'apparence des boutons
+        filterButtons.forEach(btn => {
+          btn.classList.remove('bg-primary-100', 'dark:bg-primary-900/30', 'text-primary-800', 'dark:text-primary-300', 'active-filter');
+          btn.classList.add('bg-gray-100', 'dark:bg-gray-800', 'text-gray-800', 'dark:text-gray-300');
+        });
+        this.classList.remove('bg-gray-100', 'dark:bg-gray-800', 'text-gray-800', 'dark:text-gray-300');
+        this.classList.add('bg-primary-100', 'dark:bg-primary-900/30', 'text-primary-800', 'dark:text-primary-300', 'active-filter');
+
+        // Appliquer le filtre
+        filterProjects(filterValue);
+      });
+    });
+
+    // Initialisation au chargement (afficher tous les projets)
+    filterProjects('all');
+  });
+</script>
 </body>
 </html>
