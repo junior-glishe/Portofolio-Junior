@@ -184,3 +184,62 @@
                 mobileMenu.classList.add('hidden');
             }
         });
+
+ document.addEventListener('DOMContentLoaded', function() {
+    // Initialisation de Swiper
+    const swiper = new Swiper('.project-swiper', {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      loop: false,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      breakpoints: {
+        640: { slidesPerView: 1 },
+        768: { slidesPerView: 2 },
+        1024: { slidesPerView: 3 },
+      },
+      on: {
+        init: function () {
+          // Réappliquer AOS si nécessaire (optionnel)
+        }
+      }
+    });
+
+    // Gestion des filtres
+    const filterButtons = document.querySelectorAll('[data-filter]');
+    const slides = document.querySelectorAll('.swiper-slide');
+
+    filterButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        const filterValue = this.getAttribute('data-filter');
+
+        // Mise à jour de l'apparence des boutons
+        filterButtons.forEach(btn => {
+          btn.classList.remove('bg-primary-100', 'dark:bg-primary-900/30', 'text-primary-800', 'dark:text-primary-300', 'active-filter');
+          btn.classList.add('bg-gray-100', 'dark:bg-gray-800', 'text-gray-800', 'dark:text-gray-300');
+        });
+        this.classList.remove('bg-gray-100', 'dark:bg-gray-800', 'text-gray-800', 'dark:text-gray-300');
+        this.classList.add('bg-primary-100', 'dark:bg-primary-900/30', 'text-primary-800', 'dark:text-primary-300', 'active-filter');
+
+        // Filtrer les slides
+        slides.forEach(slide => {
+          const category = slide.getAttribute('data-category');
+          if (filterValue === 'all' || category === filterValue) {
+            slide.style.display = 'block'; // ou '' selon le style par défaut
+          } else {
+            slide.style.display = 'none';
+          }
+        });
+
+        // Mettre à jour Swiper après filtrage
+        swiper.update(); // recalcul de la disposition
+        swiper.slideTo(0); // revenir au début
+      });
+    });
+  });
