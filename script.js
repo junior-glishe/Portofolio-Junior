@@ -243,3 +243,26 @@
       });
     });
   });
+swiper = new Swiper('.project-swiper', {
+  slidesPerView: 1,
+  spaceBetween: 20,
+  loop: false,
+  speed: 300,                // ← transition rapide (0.3s)
+  autoplay: {
+    delay: 3000,              // ← change de slide toutes les 3s
+    disableOnInteraction: false, // ← continue après interaction manuelle
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  breakpoints: {
+    640: { slidesPerView: 1 },
+    768: { slidesPerView: 2 },
+    1024: { slidesPerView: 3 },
+  },
+});
