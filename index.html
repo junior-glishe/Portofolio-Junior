@@ -15,6 +15,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -513,331 +514,341 @@
             </div>
         </div>
     </section>
-    <section id="projects" class="py-20 bg-white dark:bg-dark transition-colors relative overflow-hidden">
-        <div class="absolute inset-0 grid-pattern opacity-5"></div>
-        <div class="section-container relative z-10">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mb-4">Mes Projets</h2>
-                <div class="w-24 h-1.5 bg-gradient-to-r from-primary-500 to-purple-500 mx-auto mb-6 rounded-full"></div>
-                <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto text-lg">
-                    Découvrez une sélection de mes réalisations en développement web et logiciel
-                </p>
+   <section id="projects" class="py-20 bg-white dark:bg-dark transition-colors relative overflow-hidden">
+  <div class="absolute inset-0 grid-pattern opacity-5"></div>
+  <div class="section-container relative z-10">
+    
+    <!-- En-tête -->
+    <div class="text-center mb-16" data-aos="fade-up">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mb-4">Mes Projets</h2>
+      <div class="w-24 h-1.5 bg-gradient-to-r from-primary-500 to-purple-500 mx-auto mb-6 rounded-full"></div>
+      <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto text-lg">
+        Découvrez une sélection de mes réalisations en développement web et logiciel
+      </p>
+    </div>
+
+    <!-- Filtres -->
+    <div class="flex flex-wrap justify-center gap-3 mb-12" data-aos="fade-up" data-aos-delay="200">
+      <button class="px-5 py-2 bg-primary-100 dark:bg-primary-900/30 text-primary-800 dark:text-primary-300 rounded-full font-medium transition-all hover:bg-primary-200 dark:hover:bg-primary-800/50 active-filter" data-filter="all">Tous</button>
+      <button class="px-5 py-2 bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-300 rounded-full font-medium transition-all hover:bg-gray-200 dark:hover:bg-gray-700" data-filter="web">Web</button>
+      <button class="px-5 py-2 bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-300 rounded-full font-medium transition-all hover:bg-gray-200 dark:hover:bg-gray-700" data-filter="c++">C++</button>
+      <button class="px-5 py-2 bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-300 rounded-full font-medium transition-all hover:bg-gray-200 dark:hover:bg-gray-700" data-filter="fullstack">Full-Stack</button>
+    </div>
+
+    <!-- Carrousel Swiper -->
+    <div class="swiper project-swiper !pb-12" data-aos="fade-up" data-aos-delay="300">
+      <div class="swiper-wrapper">
+        <!-- Projet 1 : Boutique en ligne T-shirts -->
+        <div class="swiper-slide project-card bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden card-hover border border-gray-100 dark:border-gray-700" data-category="web">
+          <div class="h-48 relative overflow-hidden">
+            <img src="https://www.le-t-shirt.com/storage/650525/conversions/exprimez-votre-style-avec-un-tee-shirt-personnalise-brode-unique-teaser.webp" alt="Boutique en ligne T-shirts" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+            <div class="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+              <i class="fas fa-circle text-xs mr-1 animate-pulse"></i> En ligne
             </div>
-            <div class="flex flex-wrap justify-center gap-3 mb-12" data-aos="fade-up" data-aos-delay="200">
-                <button class="px-5 py-2 bg-primary-100 dark:bg-primary-900/30 text-primary-800 dark:text-primary-300 rounded-full font-medium transition-all hover:bg-primary-200 dark:hover:bg-primary-800/50 active-filter" data-filter="all">Tous</button>
-                <button class="px-5 py-2 bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-300 rounded-full font-medium transition-all hover:bg-gray-200 dark:hover:bg-gray-700" data-filter="web">Web</button>
-                <button class="px-5 py-2 bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-300 rounded-full font-medium transition-all hover:bg-gray-200 dark:hover:bg-gray-700" data-filter="c++">C++</button>
-                <button class="px-5 py-2 bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-300 rounded-full font-medium transition-all hover:bg-gray-200 dark:hover:bg-gray-700" data-filter="fullstack">Full-Stack</button>
+            <div class="absolute bottom-4 left-4 text-white">
+              <h3 class="text-xl font-bold">Boutique en ligne</h3>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
-                <div class="project-card bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden card-hover border border-gray-100 dark:border-gray-700" data-category="web" data-aos="fade-up" data-aos-delay="100">
-                    <div class="h-48 relative overflow-hidden">
-                        <img src="https://www.le-t-shirt.com/storage/650525/conversions/exprimez-votre-style-avec-un-tee-shirt-personnalise-brode-unique-teaser.webp" 
-                             alt="Boutique en ligne T-shirts"
-                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
-                        <div class="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-medium">
-                            <i class="fas fa-circle text-xs mr-1 animate-pulse"></i> En ligne
-                        </div>
-                        <div class="absolute bottom-4 left-4 text-white">
-                            <h3 class="text-xl font-bold">Boutique en ligne</h3>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <div class="flex justify-between items-start mb-3">
-                            <h3 class="text-xl font-bold text-gray-800 dark:text-white">Boutique en ligne T-shirts</h3>
-                            <span class="text-xs px-2 py-1 bg-primary-100 dark:bg-primary-900/30 text-primary-800 dark:text-primary-300 rounded-full">Web</span>
-                        </div>
-                        <p class="text-gray-600 dark:text-gray-300 mb-4">
-                            Plateforme e-commerce spécialisée avec catalogue produit, formulaire de commande avancé et gestion des demandes clients.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 text-sm rounded-full">HTML/CSS</span>
-                            <span class="px-3 py-1 bg-yellow-100 dark:bg-yellow-900/30 text-yellow-800 dark:text-yellow-300 text-sm rounded-full">JavaScript</span>
-                            <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-300 text-sm rounded-full">Form-Submit</span>
-                        </div>
-                        <div class="flex space-x-4">
-                            <a href="https://shop-store-t-shirt.netlify.app/" target="_blank" class="btn-primary text-white font-semibold px-4 py-2 rounded-lg text-sm flex-1 text-center group">
-                                <i class="fas fa-external-link-alt mr-2 group-hover:rotate-12 transition-transform"></i>Voir le projet
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden card-hover border border-gray-100 dark:border-gray-700" data-category="web" data-aos="fade-up" data-aos-delay="200">
-                    <div class="h-48 relative overflow-hidden">
-                        <img src="https://www.tresor.economie.gouv.fr/PagesInternationales/CG/images/visuel?pageType=Pays&isPreview=False" 
-                             alt="Découvrir le Congo"
-                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
-                        <div class="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-medium">
-                            <i class="fas fa-circle text-xs mr-1 animate-pulse"></i> En ligne
-                        </div>
-                        <div class="absolute bottom-4 left-4 text-white">
-                            <h3 class="text-xl font-bold">Découvrir le Congo</h3>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <div class="flex justify-between items-start mb-3">
-                            <h3 class="text-xl font-bold text-gray-800 dark:text-white">Découvrir le Congo</h3>
-                            <span class="text-xs px-2 py-1 bg-primary-100 dark:bg-primary-900/30 text-primary-800 dark:text-primary-300 rounded-full">Web</span>
-                        </div>
-                        <p class="text-gray-600 dark:text-gray-300 mb-4">
-                            Site web présentant la culture, l'histoire et les attractions touristiques du Congo-Brazzaville avec design moderne et responsive.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 text-sm rounded-full">HTML/CSS</span>
-                            <span class="px-3 py-1 bg-yellow-100 dark:bg-yellow-900/30 text-yellow-800 dark:text-yellow-300 text-sm rounded-full">JavaScript</span>
-                            <span class="px-3 py-1 bg-cyan-100 dark:bg-cyan-900/30 text-cyan-800 dark:text-cyan-300 text-sm rounded-full">Tailwind CSS</span>
-                        </div>
-                        <div class="flex space-x-4">
-                            <a href="https://congobrazzaville.netlify.app/" target="_blank" class="btn-primary text-white font-semibold px-4 py-2 rounded-lg text-sm flex-1 text-center group">
-                                <i class="fas fa-external-link-alt mr-2 group-hover:rotate-12 transition-transform"></i>Voir le projet
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden card-hover border border-gray-100 dark:border-gray-700" data-category="web" data-aos="fade-up" data-aos-delay="300">
-                    <div class="h-48 relative overflow-hidden">
-                        <img src="https://www.tourmag.com/photo/art/grande/76836533-55389305.jpg?v=1700573972" 
-                             alt="Agence de voyage"
-                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
-                        <div class="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-medium">
-                            <i class="fas fa-circle text-xs mr-1 animate-pulse"></i> En ligne
-                        </div>
-                        <div class="absolute bottom-4 left-4 text-white">
-                            <h3 class="text-xl font-bold">Agence de voyage</h3>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <div class="flex justify-between items-start mb-3">
-                            <h3 class="text-xl font-bold text-gray-800 dark:text-white">Agence de voyage Campus France</h3>
-                           
-                        </div>
-                        <p class="text-gray-600 dark:text-gray-300 mb-4">
-                            Site web pour une agence accompagnant les étudiants dans leurs démarches Campus France avec gestion de dossiers et contact direct.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 text-sm rounded-full">HTML/CSS</span>
-                            <span class="px-3 py-1 bg-yellow-100 dark:bg-yellow-900/30 text-yellow-800 dark:text-yellow-300 text-sm rounded-full">JavaScript</span>
-                            <span class="px-3 py-1 bg-cyan-100 dark:bg-cyan-900/30 text-cyan-800 dark:text-cyan-300 text-sm rounded-full">Tailwind CSS</span>
-                        </div>
-                        <div class="flex space-x-4">
-                            <a href="https://monsitewebagence.free.nf/" target="_blank" class="btn-primary text-white font-semibold px-4 py-2 rounded-lg text-sm flex-1 text-center group">
-                                <i class="fas fa-external-link-alt mr-2 group-hover:rotate-12 transition-transform"></i>Voir le projet
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden card-hover border border-gray-100 dark:border-gray-700" data-category="fullstack" data-aos="fade-up" data-aos-delay="400">
-                    <div class="h-48 relative overflow-hidden">
-                        <img src="https://www.mediaterre.org/users/Redaction_Mediaterre/images/learn-36534301920.jpg" 
-                             alt="Plateforme éducative"
-                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
-                        <div class="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-medium">
-                            <i class="fas fa-circle text-xs mr-1 animate-pulse"></i> En ligne
-                        </div>
-                        <div class="absolute bottom-4 left-4 text-white">
-                            <h3 class="text-xl font-bold">Plateforme éducative</h3>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <div class="flex justify-between items-start mb-3">
-                            <h3 class="text-xl font-bold text-gray-800 dark:text-white">Plateforme éducative Easy Courses</h3>
-                           
-                        </div>
-                        <p class="text-gray-600 dark:text-gray-300 mb-4">
-                            Système de gestion de cours en ligne avec dépôt de documents, communication enseignants-élèves et organisation par matière.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 text-sm rounded-full">HTML/CSS</span>
-                            <span class="px-3 py-1 bg-yellow-100 dark:bg-yellow-900/30 text-yellow-800 dark:text-yellow-300 text-sm rounded-full">JavaScript</span>
-                            <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-300 text-sm rounded-full">PHP</span>
-                            <span class="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300 text-sm rounded-full">MySQL</span>
-                        </div>
-                        <div class="flex space-x-4">
-                            <a href="https://easy-courses.infinityfreeapp.com" target="_blank" class="btn-primary text-white font-semibold px-4 py-2 rounded-lg text-sm flex-1 text-center group">
-                                <i class="fas fa-external-link-alt mr-2 group-hover:rotate-12 transition-transform"></i>Voir le projet
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden card-hover border border-gray-100 dark:border-gray-700" data-category="c++" data-aos="fade-up" data-aos-delay="500">
-                    <div class="h-48 relative overflow-hidden">
-                        <img src="img-c++.png" 
-                             alt="Application C++"
-                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
-                        <div class="absolute top-4 right-4 bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-medium">
-                            <i class="fas fa-code mr-1"></i> Code source
-                        </div>
-                        <div class="absolute bottom-4 left-4 text-white">
-                            <h3 class="text-xl font-bold">Application C++</h3>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <div class="flex justify-between items-start mb-3">
-                            <h3 class="text-xl font-bold text-gray-800 dark:text-white">Gestion d'étudiants en C++</h3>
-                            
-                        </div>
-                        <p class="text-gray-600 dark:text-gray-300 mb-4">
-                            Application console en C++ pour la gestion des étudiants, calcul des moyennes et détermination de l'admission avec interface interactive.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 text-sm rounded-full">C++</span>
-                            <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-300 text-sm rounded-full">POO</span>
-                            <span class="px-3 py-1 bg-cyan-100 dark:bg-cyan-900/30 text-cyan-800 dark:text-cyan-300 text-sm rounded-full">Console</span>
-                        </div>
-                        <div class="flex space-x-4">
-                            <a href="https://drive.google.com/drive/folders/1NicNQYggHsBrj1I6oIe3oas3yOZnAw6C?usp=drive_linkr" target="_blank" class="btn-primary text-white font-semibold px-4 py-2 rounded-lg text-sm flex-1 text-center group">
-                            <i class="fab fa-google-drive mr-2 group-hover:rotate-12 transition-transform"></i>Voir le code
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden card-hover border border-gray-100 dark:border-gray-700" data-category="web" data-aos="fade-up" data-aos-delay="600">
-                    <div class="h-48 relative overflow-hidden">
-                        <img src="https://upload.wikimedia.org/wikipedia/fr/7/79/Logo_QPUC_2016.jpg" 
-                             alt="Quiz éducatif"
-                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
-                        <div class="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-medium">
-                            <i class="fas fa-circle text-xs mr-1 animate-pulse"></i> En ligne
-                        </div>
-                        <div class="absolute bottom-4 left-4 text-white">
-                            <h3 class="text-xl font-bold">Quiz éducatif</h3>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <div class="flex justify-between items-start mb-3">
-                            <h3 class="text-xl font-bold text-gray-800 dark:text-white">Quiz éducatif interactif</h3>
-                           
-                        </div>
-                        <p class="text-gray-600 dark:text-gray-300 mb-4">
-                            Application web de quiz inspirée de "Questions pour un champion" avec système de score, timer et questions variées.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 text-sm rounded-full">HTML/CSS</span>
-                            <span class="px-3 py-1 bg-yellow-100 dark:bg-yellow-900/30 text-yellow-800 dark:text-yellow-300 text-sm rounded-full">JavaScript</span>
-                            <span class="px-3 py-1 bg-cyan-100 dark:bg-cyan-900/30 text-cyan-800 dark:text-cyan-300 text-sm rounded-full">Tailwind CSS</span>
-                        </div>
-                        <div class="flex space-x-4">
-                            <a href="https://answers-games.netlify.app/" target="_blank" class="btn-primary text-white font-semibold px-4 py-2 rounded-lg text-sm flex-1 text-center group">
-                                <i class="fas fa-external-link-alt mr-2 group-hover:rotate-12 transition-transform"></i>Voir le projet
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden card-hover border border-gray-100 dark:border-gray-700" data-category="web" data-aos="fade-up" data-aos-delay="600">
-                    <div class="h-48 relative overflow-hidden">
-                        <img src="https://cdn.dribbble.com/userupload/16241470/file/original-e69649e67ba57753f2b71c9087a7d468.jpg?format=webp&resize=400x300&vertical=center" 
-                             alt="Gestion de conges"
-                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
-                        <div class="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-medium">
-                            <i class="fas fa-code mr-1"></i> Code source
-                        </div>
-                        <div class="absolute bottom-4 left-4 text-white">
-                            <h3 class="text-xl font-bold">Développeur Frontend – PORTAIL RH</h3>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <div class="flex justify-between items-start mb-3">
-                            <h3 class="text-xl font-bold text-gray-800 dark:text-white">Création d’Interfaces Fluides</h3>
-                           
-                        </div>
-                        <p class="text-gray-600 dark:text-gray-300 mb-4">
-                            Dans le projet PORTAIL RH, j’ai développé les interfaces frontend : page de connexion, tableau de bord, formulaires de demandes et espace admin. J’ai conçu une interface claire, professionnelle et intuitive, optimisée UI/UX et facilement intégrable avec le backend.                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 text-sm rounded-full">HTML/CSS</span>
-                            <span class="px-3 py-1 bg-yellow-100 dark:bg-yellow-900/30 text-yellow-800 dark:text-yellow-300 text-sm rounded-full">JavaScript</span>
-                            <span class="px-3 py-1 bg-cyan-100 dark:bg-cyan-900/30 text-cyan-800 dark:text-cyan-300 text-sm rounded-full">Tailwind CSS</span>
-                        </div>
-                        <div class="flex space-x-4">
-                            <a href="https://gitlab.com/kouandzijunior1/projet-web/-/tree/master?ref_type=heads" target="_blank" class="btn-primary text-white font-semibold px-4 py-2 rounded-lg text-sm flex-1 text-center group">
-                                <i class="fab fa-gitlab mr-2 group-hover:rotate-12 transition-transform"></i>Voir le code
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden card-hover border border-gray-100 dark:border-gray-700" data-category="web" data-aos="fade-up" data-aos-delay="600">
-                    <div class="h-48 relative overflow-hidden">
-                        <img src="https://image.lecourrier.vn/MediaUpload/Org/2023/02/12/144710-2.jpg" 
-                             alt="Site Web Innovant avec IA"
-                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
-                        <div class="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-medium">
-                            <i class="fas fa-circle text-xs mr-1 animate-pulse"></i> En ligne
-                        </div>
-                        <div class="absolute bottom-4 left-4 text-white">
-                            <h3 class="text-xl font-bold">Site Web Innovant avec IA</h3>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <div class="flex justify-between items-start mb-3">
-                            <h3 class="text-xl font-bold text-gray-800 dark:text-white">Design Web Intuitif</h3>
-                            <span class="text-xs px-2 py-1 bg-primary-100 dark:bg-primary-900/30 text-primary-800 dark:text-primary-300 rounded-full">Web</span>
-                        </div>
-                        <p class="text-gray-600 dark:text-gray-300 mb-4">
-                            J’ai développé un site web pour NexusLab en utilisant l’IA pour optimiser le développement et le design. Le site présente l’innovation en informatique quantique, cybersécurité et intelligence artificielle avec une interface moderne, fluide et interactive, tout en suivant les bonnes pratiques UI/UX pour un code structuré et maintenable.                             <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 text-sm rounded-full">Vibe Coding</span>
-                            <span class="px-3 py-1 bg-yellow-100 dark:bg-yellow-900/30 text-yellow-800 dark:text-yellow-300 text-sm rounded-full">HTML/CSS</span>
-                            <span class="px-3 py-1 bg-cyan-100 dark:bg-cyan-900/30 text-cyan-800 dark:text-cyan-300 text-sm rounded-full">Tailwind CSS</span>
-                        </div>
-                        <div class="flex space-x-4">
-                            <a href="https://labo-science.netlify.app/" target="_blank" class="btn-primary text-white font-semibold px-4 py-2 rounded-lg text-sm flex-1 text-center group">
-                                <i class="fas fa-external-link-alt mr-2 group-hover:rotate-12 transition-transform"></i>Voir le projet
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden card-hover border border-gray-100 dark:border-gray-700" data-category="web" data-aos="fade-up" data-aos-delay="600">
-                    <div class="h-48 relative overflow-hidden">
-                        <img src="https://static0.makeuseofimages.com/wordpress/wp-content/uploads/wm/2023/06/crud.jpg?w=1200&h=628&fit=crop" 
-                             alt="Gestion de conges"
-                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
-                            <div class="absolute top-4 right-4 bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-medium">
-                            <i class="fas fa-code mr-1"></i> Code source
-                        </div>
-                        <div class="absolute bottom-4 left-4 text-white">
-                            <h3 class="text-xl font-bold">Application CRUD Django</h3>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <div class="flex justify-between items-start mb-3">
-                            <h3 class="text-xl font-bold text-gray-800 dark:text-white">Application CRUD Djangos</h3>
-                           
-                        </div>
-                        <p class="text-gray-600 dark:text-gray-300 mb-4">
-                            J’ai développé une application CRUD avec Django, permettant de Créer, Lire, Mettre à jour et Supprimer des données. L’application combine une interface claire, des formulaires sécurisés, et une gestion efficace de la base de données, en suivant les bonnes pratiques Django pour un code modulaire et maintenable.                             <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 text-sm rounded-full">Python/Django</span>
-                            <span class="px-3 py-1 bg-cyan-100 dark:bg-cyan-900/30 text-cyan-800 dark:text-cyan-300 text-sm rounded-full">DaisyUI</span>
-                        </div>
-                        <div class="flex space-x-4">
-                            <a href="https://gitlab.com/kouandzijunior1/projet-django-crud/-/tree/master?ref_type=heads" target="_blank" class="btn-primary text-white font-semibold px-4 py-2 rounded-lg text-sm flex-1 text-center group">
-                                <i class="fab fa-gitlab mr-2 group-hover:rotate-12 transition-transform"></i>Voir le code
-                            </a>
-                        </div>
-                    </div>
-                </div>
+          </div>
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-3">
+              <h3 class="text-xl font-bold text-gray-800 dark:text-white">Boutique en ligne T-shirts</h3>
             </div>
-            <div class="text-center mt-16" data-aos="fade-up">
-                <div class="bg-gradient-to-r from-blue-50 to-cyan-50 dark:from-gray-800 dark:to-gray-900 rounded-2xl p-8 max-w-2xl mx-auto border border-gray-100 dark:border-gray-700 card-hover relative overflow-hidden">
-                    <div class="absolute -top-20 -right-20 w-40 h-40 bg-gradient-to-br from-primary-500/10 to-purple-500/10 rounded-full"></div>
-                    <div class="absolute -bottom-20 -left-20 w-40 h-40 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-full"></div>
-                    
-                    <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-4 relative z-10">Vous avez un projet en tête ?</h3>
-                    <p class="text-gray-600 dark:text-gray-300 mb-6 relative z-10">
-                        Je suis toujours ouvert à de nouvelles collaborations et défis techniques. N'hésitez pas à me contacter pour discuter de votre projet.
-                    </p>
-                    <a href="#contact" class="btn-primary text-white font-semibold px-8 py-3 rounded-lg inline-flex items-center relative z-10 group">
-                        <i class="fas fa-paper-plane mr-3 group-hover:translate-x-1 transition-transform"></i>Discutons de votre projet
-                    </a>
-                </div>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">
+              Plateforme e-commerce spécialisée avec catalogue produit, formulaire de commande avancé et gestion des demandes clients.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 text-sm rounded-full">HTML/CSS</span>
+              <span class="px-3 py-1 bg-yellow-100 dark:bg-yellow-900/30 text-yellow-800 dark:text-yellow-300 text-sm rounded-full">JavaScript</span>
+              <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-300 text-sm rounded-full">Form-Submit</span>
             </div>
+            <div class="flex space-x-4">
+              <a href="https://shop-store-t-shirt.netlify.app/" target="_blank" class="btn-primary text-white font-semibold px-4 py-2 rounded-lg text-sm flex-1 text-center group">
+                <i class="fas fa-external-link-alt mr-2 group-hover:rotate-12 transition-transform"></i>Voir le projet
+              </a>
+            </div>
+          </div>
         </div>
-    </section>
+
+        <!-- Projet 2 : Découvrir le Congo -->
+        <div class="swiper-slide project-card bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden card-hover border border-gray-100 dark:border-gray-700" data-category="web">
+          <div class="h-48 relative overflow-hidden">
+            <img src="https://www.tresor.economie.gouv.fr/PagesInternationales/CG/images/visuel?pageType=Pays&isPreview=False" alt="Découvrir le Congo" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+            <div class="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+              <i class="fas fa-circle text-xs mr-1 animate-pulse"></i> En ligne
+            </div>
+            <div class="absolute bottom-4 left-4 text-white">
+              <h3 class="text-xl font-bold">Découvrir le Congo</h3>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-3">
+              <h3 class="text-xl font-bold text-gray-800 dark:text-white">Découvrir le Congo</h3>
+            </div>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">
+              Site web présentant la culture, l'histoire et les attractions touristiques du Congo-Brazzaville avec design moderne et responsive.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 text-sm rounded-full">HTML/CSS</span>
+              <span class="px-3 py-1 bg-yellow-100 dark:bg-yellow-900/30 text-yellow-800 dark:text-yellow-300 text-sm rounded-full">JavaScript</span>
+              <span class="px-3 py-1 bg-cyan-100 dark:bg-cyan-900/30 text-cyan-800 dark:text-cyan-300 text-sm rounded-full">Tailwind CSS</span>
+            </div>
+            <div class="flex space-x-4">
+              <a href="https://congobrazzaville.netlify.app/" target="_blank" class="btn-primary text-white font-semibold px-4 py-2 rounded-lg text-sm flex-1 text-center group">
+                <i class="fas fa-external-link-alt mr-2 group-hover:rotate-12 transition-transform"></i>Voir le projet
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projet 3 : Agence de voyage -->
+        <div class="swiper-slide project-card bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden card-hover border border-gray-100 dark:border-gray-700" data-category="web">
+          <div class="h-48 relative overflow-hidden">
+            <img src="https://www.tourmag.com/photo/art/grande/76836533-55389305.jpg?v=1700573972" alt="Agence de voyage" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+            <div class="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+              <i class="fas fa-circle text-xs mr-1 animate-pulse"></i> En ligne
+            </div>
+            <div class="absolute bottom-4 left-4 text-white">
+              <h3 class="text-xl font-bold">Agence de voyage</h3>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-3">
+              <h3 class="text-xl font-bold text-gray-800 dark:text-white">Agence de voyage Campus France</h3>
+            </div>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">
+              Site web pour une agence accompagnant les étudiants dans leurs démarches Campus France avec gestion de dossiers et contact direct.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 text-sm rounded-full">HTML/CSS</span>
+              <span class="px-3 py-1 bg-yellow-100 dark:bg-yellow-900/30 text-yellow-800 dark:text-yellow-300 text-sm rounded-full">JavaScript</span>
+              <span class="px-3 py-1 bg-cyan-100 dark:bg-cyan-900/30 text-cyan-800 dark:text-cyan-300 text-sm rounded-full">Tailwind CSS</span>
+            </div>
+            <div class="flex space-x-4">
+              <a href="https://monsitewebagence.free.nf/" target="_blank" class="btn-primary text-white font-semibold px-4 py-2 rounded-lg text-sm flex-1 text-center group">
+                <i class="fas fa-external-link-alt mr-2 group-hover:rotate-12 transition-transform"></i>Voir le projet
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projet 4 : Plateforme éducative -->
+        <div class="swiper-slide project-card bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden card-hover border border-gray-100 dark:border-gray-700" data-category="fullstack">
+          <div class="h-48 relative overflow-hidden">
+            <img src="https://www.mediaterre.org/users/Redaction_Mediaterre/images/learn-36534301920.jpg" alt="Plateforme éducative" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+            <div class="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+              <i class="fas fa-circle text-xs mr-1 animate-pulse"></i> En ligne
+            </div>
+            <div class="absolute bottom-4 left-4 text-white">
+              <h3 class="text-xl font-bold">Plateforme éducative</h3>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-3">
+              <h3 class="text-xl font-bold text-gray-800 dark:text-white">Plateforme éducative Easy Courses</h3>
+            </div>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">
+              Système de gestion de cours en ligne avec dépôt de documents, communication enseignants-élèves et organisation par matière.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 text-sm rounded-full">HTML/CSS</span>
+              <span class="px-3 py-1 bg-yellow-100 dark:bg-yellow-900/30 text-yellow-800 dark:text-yellow-300 text-sm rounded-full">JavaScript</span>
+              <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-300 text-sm rounded-full">PHP</span>
+              <span class="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300 text-sm rounded-full">MySQL</span>
+            </div>
+            <div class="flex space-x-4">
+              <a href="https://easy-courses.infinityfreeapp.com" target="_blank" class="btn-primary text-white font-semibold px-4 py-2 rounded-lg text-sm flex-1 text-center group">
+                <i class="fas fa-external-link-alt mr-2 group-hover:rotate-12 transition-transform"></i>Voir le projet
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projet 5 : Application C++ -->
+        <div class="swiper-slide project-card bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden card-hover border border-gray-100 dark:border-gray-700" data-category="c++">
+          <div class="h-48 relative overflow-hidden">
+            <img src="img-c++.png" alt="Application C++" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+            <div class="absolute top-4 right-4 bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+              <i class="fas fa-code mr-1"></i> Code source
+            </div>
+            <div class="absolute bottom-4 left-4 text-white">
+              <h3 class="text-xl font-bold">Application C++</h3>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-3">
+              <h3 class="text-xl font-bold text-gray-800 dark:text-white">Gestion d'étudiants en C++</h3>
+            </div>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">
+              Application console en C++ pour la gestion des étudiants, calcul des moyennes et détermination de l'admission avec interface interactive.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 text-sm rounded-full">C++</span>
+              <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-300 text-sm rounded-full">POO</span>
+              <span class="px-3 py-1 bg-cyan-100 dark:bg-cyan-900/30 text-cyan-800 dark:text-cyan-300 text-sm rounded-full">Console</span>
+            </div>
+            <div class="flex space-x-4">
+              <a href="https://drive.google.com/drive/folders/1NicNQYggHsBrj1I6oIe3oas3yOZnAw6C?usp=drive_linkr" target="_blank" class="btn-primary text-white font-semibold px-4 py-2 rounded-lg text-sm flex-1 text-center group">
+                <i class="fab fa-google-drive mr-2 group-hover:rotate-12 transition-transform"></i>Voir le code
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projet 6 : Quiz éducatif -->
+        <div class="swiper-slide project-card bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden card-hover border border-gray-100 dark:border-gray-700" data-category="web">
+          <div class="h-48 relative overflow-hidden">
+            <img src="https://upload.wikimedia.org/wikipedia/fr/7/79/Logo_QPUC_2016.jpg" alt="Quiz éducatif" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+            <div class="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+              <i class="fas fa-circle text-xs mr-1 animate-pulse"></i> En ligne
+            </div>
+            <div class="absolute bottom-4 left-4 text-white">
+              <h3 class="text-xl font-bold">Quiz éducatif</h3>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-3">
+              <h3 class="text-xl font-bold text-gray-800 dark:text-white">Quiz éducatif interactif</h3>
+            </div>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">
+              Application web de quiz inspirée de "Questions pour un champion" avec système de score, timer et questions variées.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 text-sm rounded-full">HTML/CSS</span>
+              <span class="px-3 py-1 bg-yellow-100 dark:bg-yellow-900/30 text-yellow-800 dark:text-yellow-300 text-sm rounded-full">JavaScript</span>
+              <span class="px-3 py-1 bg-cyan-100 dark:bg-cyan-900/30 text-cyan-800 dark:text-cyan-300 text-sm rounded-full">Tailwind CSS</span>
+            </div>
+            <div class="flex space-x-4">
+              <a href="https://answers-games.netlify.app/" target="_blank" class="btn-primary text-white font-semibold px-4 py-2 rounded-lg text-sm flex-1 text-center group">
+                <i class="fas fa-external-link-alt mr-2 group-hover:rotate-12 transition-transform"></i>Voir le projet
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projet 7 : PORTAIL RH -->
+        <div class="swiper-slide project-card bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden card-hover border border-gray-100 dark:border-gray-700" data-category="web">
+          <div class="h-48 relative overflow-hidden">
+            <img src="https://cdn.dribbble.com/userupload/16241470/file/original-e69649e67ba57753f2b71c9087a7d468.jpg?format=webp&resize=400x300&vertical=center" alt="Gestion de conges" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+            <div class="absolute top-4 right-4 bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+              <i class="fas fa-code mr-1"></i> Code source
+            </div>
+            <div class="absolute bottom-4 left-4 text-white">
+              <h3 class="text-xl font-bold">Développeur Frontend – PORTAIL RH</h3>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-3">
+              <h3 class="text-xl font-bold text-gray-800 dark:text-white">Création d’Interfaces Fluides</h3>
+            </div>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">
+              Dans le projet PORTAIL RH, j’ai développé les interfaces frontend : page de connexion, tableau de bord, formulaires de demandes et espace admin. J’ai conçu une interface claire, professionnelle et intuitive, optimisée UI/UX et facilement intégrable avec le backend.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 text-sm rounded-full">HTML/CSS</span>
+              <span class="px-3 py-1 bg-yellow-100 dark:bg-yellow-900/30 text-yellow-800 dark:text-yellow-300 text-sm rounded-full">JavaScript</span>
+              <span class="px-3 py-1 bg-cyan-100 dark:bg-cyan-900/30 text-cyan-800 dark:text-cyan-300 text-sm rounded-full">Tailwind CSS</span>
+            </div>
+            <div class="flex space-x-4">
+              <a href="https://gitlab.com/kouandzijunior1/projet-web/-/tree/master?ref_type=heads" target="_blank" class="btn-primary text-white font-semibold px-4 py-2 rounded-lg text-sm flex-1 text-center group">
+                <i class="fab fa-gitlab mr-2 group-hover:rotate-12 transition-transform"></i>Voir le code
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projet 8 : NexusLab (IA) -->
+        <div class="swiper-slide project-card bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden card-hover border border-gray-100 dark:border-gray-700" data-category="web">
+          <div class="h-48 relative overflow-hidden">
+            <img src="https://image.lecourrier.vn/MediaUpload/Org/2023/02/12/144710-2.jpg" alt="Site Web Innovant avec IA" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+            <div class="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+              <i class="fas fa-circle text-xs mr-1 animate-pulse"></i> En ligne
+            </div>
+            <div class="absolute bottom-4 left-4 text-white">
+              <h3 class="text-xl font-bold">Site Web Innovant avec IA</h3>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-3">
+              <h3 class="text-xl font-bold text-gray-800 dark:text-white">Design Web Intuitif</h3>
+            </div>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">
+              J’ai développé un site web pour NexusLab en utilisant l’IA pour optimiser le développement et le design. Le site présente l’innovation en informatique quantique, cybersécurité et intelligence artificielle avec une interface moderne, fluide et interactive.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 text-sm rounded-full">Vibe Coding</span>
+              <span class="px-3 py-1 bg-yellow-100 dark:bg-yellow-900/30 text-yellow-800 dark:text-yellow-300 text-sm rounded-full">HTML/CSS</span>
+              <span class="px-3 py-1 bg-cyan-100 dark:bg-cyan-900/30 text-cyan-800 dark:text-cyan-300 text-sm rounded-full">Tailwind CSS</span>
+            </div>
+            <div class="flex space-x-4">
+              <a href="https://labo-science.netlify.app/" target="_blank" class="btn-primary text-white font-semibold px-4 py-2 rounded-lg text-sm flex-1 text-center group">
+                <i class="fas fa-external-link-alt mr-2 group-hover:rotate-12 transition-transform"></i>Voir le projet
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projet 9 : Application CRUD Django -->
+        <div class="swiper-slide project-card bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden card-hover border border-gray-100 dark:border-gray-700" data-category="fullstack">
+          <div class="h-48 relative overflow-hidden">
+            <img src="https://static0.makeuseofimages.com/wordpress/wp-content/uploads/wm/2023/06/crud.jpg?w=1200&h=628&fit=crop" alt="Application CRUD Django" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+            <div class="absolute top-4 right-4 bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+              <i class="fas fa-code mr-1"></i> Code source
+            </div>
+            <div class="absolute bottom-4 left-4 text-white">
+              <h3 class="text-xl font-bold">Application CRUD Django</h3>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-3">
+              <h3 class="text-xl font-bold text-gray-800 dark:text-white">Application CRUD Django</h3>
+            </div>
+            <p class="text-gray-600 dark:text-gray-300 mb-4">
+              J’ai développé une application CRUD avec Django, permettant de Créer, Lire, Mettre à jour et Supprimer des données. L’application combine une interface claire, des formulaires sécurisés, et une gestion efficace de la base de données.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 text-sm rounded-full">Python/Django</span>
+              <span class="px-3 py-1 bg-cyan-100 dark:bg-cyan-900/30 text-cyan-800 dark:text-cyan-300 text-sm rounded-full">DaisyUI</span>
+            </div>
+            <div class="flex space-x-4">
+              <a href="https://gitlab.com/kouandzijunior1/projet-django-crud/-/tree/master?ref_type=heads" target="_blank" class="btn-primary text-white font-semibold px-4 py-2 rounded-lg text-sm flex-1 text-center group">
+                <i class="fab fa-gitlab mr-2 group-hover:rotate-12 transition-transform"></i>Voir le code
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Navigation et pagination -->
+      <div class="swiper-button-next !text-primary-500 after:!text-2xl"></div>
+      <div class="swiper-button-prev !text-primary-500 after:!text-2xl"></div>
+      <div class="swiper-pagination !relative !mt-8"></div>
+    </div>
+
+    <!-- Appel à l'action -->
+    <div class="text-center mt-16" data-aos="fade-up">
+      <div class="bg-gradient-to-r from-blue-50 to-cyan-50 dark:from-gray-800 dark:to-gray-900 rounded-2xl p-8 max-w-2xl mx-auto border border-gray-100 dark:border-gray-700 card-hover relative overflow-hidden">
+        <div class="absolute -top-20 -right-20 w-40 h-40 bg-gradient-to-br from-primary-500/10 to-purple-500/10 rounded-full"></div>
+        <div class="absolute -bottom-20 -left-20 w-40 h-40 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-full"></div>
+        <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-4 relative z-10">Vous avez un projet en tête ?</h3>
+        <p class="text-gray-600 dark:text-gray-300 mb-6 relative z-10">
+          Je suis toujours ouvert à de nouvelles collaborations et défis techniques. N'hésitez pas à me contacter pour discuter de votre projet.
+        </p>
+        <a href="#contact" class="btn-primary text-white font-semibold px-8 py-3 rounded-lg inline-flex items-center relative z-10 group">
+          <i class="fas fa-paper-plane mr-3 group-hover:translate-x-1 transition-transform"></i>Discutons
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
 <section id="contact" class="py-20 bg-gray-50 dark:bg-gray-900 transition-colors relative overflow-hidden">
     <div class="absolute inset-0 grid-pattern opacity-5"></div>
     <div class="section-container relative z-10">
@@ -1001,6 +1012,8 @@
             </div>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
     <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
