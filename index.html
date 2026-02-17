@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Junior Kouandzi | Développeur Full-Stack & Étudiant en Systèmes Informatiques</title>
+    <meta name="description" content="Portfolio de Junior Kouandzi, développeur full-stack passionné. Découvrez mes projets, compétences et mon parcours en systèmes informatiques.">
+    <meta name="keywords" content="développeur web, full-stack, portfolio, étudiant informatique, HTML, CSS, JavaScript, Python, C++">
+    <meta name="author" content="Junior Kouandzi">
+    <meta property="og:title" content="Junior Kouandzi | Développeur Full-Stack">
+    <meta property="og:description" content="Portfolio d'un développeur passionné spécialisé en création d'applications web modernes.">
+    <meta property="og:type" content="website">
+    <link rel="icon" type="image/png" href="https://img.freepik.com/photos-premium/balise-script-programmation-symbole-3d-fond-bleu_582637-286.jpg?semt=ais_hybrid&w=740&q=80">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#eef2ff',
+                            100: '#e0e7ff',
+                            200: '#c7d2fe',
+                            300: '#a5b4fc',
+                            400: '#818cf8',
+                            500: '#6366f1',
+                            600: '#4f46e5',
+                            700: '#4338ca',
+                            800: '#3730a3',
+                            900: '#312e81',
+                        },
+                        secondary: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                        },
+                        dark: '#0f172a',
+                        light: '#f8fafc',
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                        'heading': ['Montserrat', 'Inter', 'sans-serif'],
+                        'poppins': ['Poppins', 'sans-serif'],
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'fade-in': 'fadeIn 0.8s ease-in-out',
+                        'slide-up': 'slideUp 0.6s ease-out',
+                        'pulse-slow': 'pulse 3s ease-in-out infinite',
+                        'gradient': 'gradient 8s ease infinite',
+                        'typewriter': 'typewriter 2.5s steps(20) 1s 1 normal both, blink 0.75s step-end infinite',
+                        'bounce-slow': 'bounce 2s infinite',
+                        'shimmer': 'shimmer 2s infinite',
+                        'blob': 'blob 7s infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        fadeIn: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        slideUp: {
+                            '0%': { opacity: '0', transform: 'translateY(30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        gradient: {
+                            '0%, 100%': { backgroundPosition: '0% 50%' },
+                            '50%': { backgroundPosition: '100% 50%' },
+                        },
+                        typewriter: {
+                            from: { width: '0' },
+                            to: { width: '100%' },
+                        },
+                        blink: {
+                            'from, to': { borderColor: 'transparent' },
+                            '50%': { borderColor: '#6366f1' },
+                        },
+                        shimmer: {
+                            '0%': { backgroundPosition: '-1000px 0' },
+                            '100%': { backgroundPosition: '1000px 0' },
+                        },
+                        blob: {
+                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
+                        }
+                    },
+                    backgroundImage: {
+                        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+                        'gradient-shimmer': 'linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent)',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-light text-gray-800 overflow-x-hidden dark:bg-dark dark:text-gray-200">
+    <div id="loader">
+        <div class="spinner"></div>
+    </div>
+    <header class="fixed w-full z-50 bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm shadow-sm border-b border-gray-100 dark:border-gray-800 transition-all duration-300">
+        <div class="section-container">
+            <div class="flex justify-between items-center py-4">
+                <a href="#" class="text-2xl font-bold gradient-text flex items-center">
+                    <i class="fas fa-code mr-2"></i>
+                    <span class="hidden sm:inline">Junior</span><span class="font-extrabold text-primary-600">Dev</span>
+                </a>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#about" class="nav-link font-medium text-gray-700 dark:text-gray-300 hover:text-primary-600 transition-colors">À propos</a>
+                    <a href="#skills" class="nav-link font-medium text-gray-700 dark:text-gray-300 hover:text-primary-600 transition-colors">Compétences</a>
+                    <a href="#projects" class="nav-link font-medium text-gray-700 dark:text-gray-300 hover:text-primary-600 transition-colors">Projets</a>
+                    <a href="#contact" class="nav-link font-medium text-gray-700 dark:text-gray-300 hover:text-primary-600 transition-colors">Contact</a>
+                </nav>
+                <div class="flex items-center space-x-4">
+                   <button id="themeToggle" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+                    <i class="fas fa-moon" id="themeIcon"></i>
+                </button>
+                    <a href="cv.html" class="btn-primary text-white font-semibold px-5 py-2 rounded-lg text-sm hidden sm:inline-block">
+                        <i class="fas fa-download mr-2"></i>Télécharger CV
+                    </a>
+                    <button id="mobileMenuButton" class="md:hidden p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                        <i class="fas fa-bars text-lg text-gray-700 dark:text-gray-300"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobileMenu" class="md:hidden hidden bg-white dark:bg-gray-900 shadow-lg py-4 px-6 animate-slide-up border-t border-gray-100 dark:border-gray-800">
+            <div class="flex flex-col space-y-4">
+                <a href="#about" class="font-medium text-gray-700 dark:text-gray-300 hover:text-primary-600 transition-colors py-3 border-b border-gray-100 dark:border-gray-800 flex items-center">
+                    <i class="fas fa-user mr-3"></i>À propos
+                </a>
+                <a href="#skills" class="font-medium text-gray-700 dark:text-gray-300 hover:text-primary-600 transition-colors py-3 border-b border-gray-100 dark:border-gray-800 flex items-center">
+                    <i class="fas fa-cogs mr-3"></i>Compétences
+                </a>
+                <a href="#projects" class="font-medium text-gray-700 dark:text-gray-300 hover:text-primary-600 transition-colors py-3 border-b border-gray-100 dark:border-gray-800 flex items-center">
+                    <i class="fas fa-project-diagram mr-3"></i>Projets
+                </a>
+                <a href="#contact" class="font-medium text-gray-700 dark:text-gray-300 hover:text-primary-600 transition-colors py-3 flex items-center">
+                    <i class="fas fa-envelope mr-3"></i>Contact
+                </a>
+                <a href="cv.html" class="btn-primary text-white font-semibold px-4 py-3 rounded-lg mt-2 flex items-center justify-center">
+                    <i class="fas fa-download mr-2"></i>Télécharger mon CV
+                </a>
+            </div>
+        </div>
+    </header>
+    <section class="gradient-bg text-white min-h-screen flex items-center pt-20 pb-16 relative overflow-hidden">
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="absolute top-10 left-10 w-64 h-64 bg-gradient-to-br from-primary-500/20 to-purple-500/20 rounded-full animate-blob"></div>
+            <div class="absolute bottom-20 right-20 w-48 h-48 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-full animate-blob" style="animation-delay: 2s;"></div>
+            <div class="absolute top-1/3 right-1/4 w-32 h-32 bg-gradient-to-br from-pink-500/20 to-rose-500/20 rounded-full animate-blob" style="animation-delay: 4s;"></div>
+        </div>
+        <div class="section-container relative z-10">
+            <div class="flex flex-col lg:flex-row items-center justify-between">
+                <div class="lg:w-1/2 mb-12 lg:mb-0 animate-fade-in text-center lg:text-left" data-aos="fade-right" data-aos-delay="300">
+                    <div class="inline-flex items-center bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-6 glass">
+                        <div class="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></div>
+                        <span class="text-sm font-medium">Disponible pour des opportunités</span>
+                    </div>
+                    <h1 class="text-4xl xs:text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 leading-tight hero-title">
+                        <span class="block">Hey, je suis</span>
+                        <span class="gradient-text mt-2">Junior Miette Kouandzi</span>
+                    </h1>
+                    <div class="typewriter-effect mb-6 text-2xl font-semibold">
+                        <span>Développeur Full-Stack & Étudiant </span>
+                    </div>
+                    <p class="text-xl mb-8 text-blue-100 leading-relaxed max-w-2xl">
+                        Je crée des expériences web innovantes et performantes avec une passion pour les technologies modernes. 
+                        Mon objectif est de transformer vos idées en solutions numériques élégantes et efficaces.
+                    </p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6 justify-center lg:justify-start">
+                        <a href="#projects" class="btn-primary text-white font-semibold px-8 py-4 rounded-lg text-lg flex items-center justify-center group">
+                            <i class="fas fa-eye mr-3 group-hover:rotate-12 transition-transform"></i>
+                            Explorer mes projets
+                        </a>
+                        <a href="#contact" class="btn-secondary text-white font-semibold px-8 py-4 rounded-lg text-lg flex items-center justify-center group">
+                            <i class="fas fa-paper-plane mr-3 group-hover:translate-x-1 transition-transform"></i>
+                            Discuter d'un projet
+                        </a>
+                    </div>
+                    <div class="flex justify-center lg:justify-start space-x-8 mt-12 stats-container">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold relative">
+                                <span class="counter" data-target="8">0</span>+
+                                <div class="absolute -bottom-1 left-0 right-0 h-1 bg-gradient-to-r from-primary-500 to-transparent rounded-full"></div>
+                            </div>
+                            <div class="text-blue-200 text-sm mt-2">Projets réalisés</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold relative">
+                                <span class="counter" data-target="10">0</span>+
+                                <div class="absolute -bottom-1 left-0 right-0 h-1 bg-gradient-to-r from-cyan-500 to-transparent rounded-full"></div>
+                            </div>
+                            <div class="text-blue-200 text-sm mt-2">Technologies maîtrisées</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold relative">
+                                <span class="counter" data-target="2">0</span>+
+                                <div class="absolute -bottom-1 left-0 right-0 h-1 bg-gradient-to-r from-purple-500 to-transparent rounded-full"></div>
+                            </div>
+                            <div class="text-blue-200 text-sm mt-2">Années d'expérience</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-2/5 flex justify-center" data-aos="fade-left" data-aos-delay="500">
+                    <div class="relative">
+                        <div class="w-72 h-72 sm:w-80 sm:h-80 bg-gradient-to-br from-primary-500 to-purple-600 rounded-3xl shadow-2xl flex items-center justify-center animate-float overflow-hidden relative">
+                            <div class="absolute inset-0 bg-gradient-to-tr from-primary-400/30 to-purple-500/30 animate-pulse-slow"></div>
+                            <div class="w-64 h-64 rounded-2xl overflow-hidden border-4 border-white/30 shadow-xl">
+                                <img src="image2.jpeg" 
+                                     alt="Junior Miette Kouandzi - Photo de profil"
+                                     class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                        <div class="absolute -top-4 -left-4 bg-white dark:bg-gray-800 text-primary-600 dark:text-primary-400 px-5 py-3 rounded-xl shadow-xl flex items-center card-hover glass" data-aos="fade-right" data-aos-delay="700">
+                            <i class="fab fa-html5 text-2xl mr-3"></i>
+                            <div>
+                                <span class="font-bold block">Frontend</span>
+                                <span class="text-xs text-gray-600 dark:text-gray-400">Intermédiaire</span>
+                            </div>
+                        </div>
+                        <div class="absolute -bottom-4 -right-4 bg-white dark:bg-gray-800 text-primary-600 dark:text-primary-400 px-5 py-3 rounded-xl shadow-xl flex items-center card-hover glass" data-aos="fade-left" data-aos-delay="700">
+                            <i class="fas fa-server text-2xl mr-3"></i>
+                            <div>
+                                <span class="font-bold block">Backend</span>
+                                <span class="text-xs text-gray-600 dark:text-gray-400">Intermédiaire</span>
+                            </div>
+                        </div>
+
+                        <div class="absolute top-1/2 -left-8 bg-white dark:bg-gray-800 text-primary-600 dark:text-primary-400 px-4 py-2 rounded-full shadow-lg flex items-center card-hover glass" data-aos="zoom-in" data-aos-delay="900">
+                            <i class="fab fa-js text-xl mr-2"></i>
+                            <span class="font-semibold">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce-slow">
+            <a href="#about" class="text-white text-2xl">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+    <section id="about" class="py-20 bg-white dark:bg-dark transition-colors relative overflow-hidden">
+        <div class="absolute inset-0 grid-pattern opacity-5"></div>
+        <div class="section-container relative z-10">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mb-4">À propos de moi</h2>
+                <div class="w-24 h-1.5 bg-gradient-to-r from-primary-500 to-purple-500 mx-auto mb-6 rounded-full"></div>
+                <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto text-lg">
+                    Découvrez mon parcours, ma passion pour la technologie et ma vision du développement
+                </p>
+            </div>
+
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="lg:w-2/5" data-aos="fade-right">
+                    <div class="rounded-2xl overflow-hidden shadow-2xl card-hover border border-gray-100 dark:border-gray-800 relative">
+                        <div class="absolute inset-0 bg-gradient-to-br from-primary-500/5 to-purple-500/5"></div>
+                        <div class="h-80 bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-gray-800 dark:to-gray-900 flex items-center justify-center p-8 relative">
+                            <div class="absolute inset-0 grid-pattern opacity-10"></div>
+                            <div class="text-center relative z-10">
+                                <div class="w-40 h-40 mx-auto mb-6 rounded-full overflow-hidden border-4 border-white dark:border-gray-800 shadow-xl ring-4 ring-primary-500/20">
+                                    <img src="WhatsApp Image 2026-01-14 at 18.35.35.jpeg" 
+                                         alt="Junior Miette Kouandzi - Photo de profil"
+                                         class="w-full h-full object-cover">
+                                </div>
+                                <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-2">Junior Miette Kouandzi</h3>
+                                <p class="text-primary-600 dark:text-primary-400 font-medium mb-3">Développeur Full-Stack</p>
+                                <div class="mt-4 flex justify-center space-x-3">
+                                    <span class="px-3 py-1 bg-primary-100 dark:bg-primary-900/30 text-primary-800 dark:text-primary-300 text-sm rounded-full flex items-center">
+                                        <i class="fas fa-graduation-cap mr-1"></i> Étudiant
+                                    </span>
+                                    <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-300 text-sm rounded-full flex items-center">
+                                        <i class="fas fa-heart mr-1"></i> Passionné
+                                    </span>
+                                    <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 text-sm rounded-full flex items-center">
+                                        <i class="fas fa-lightbulb mr-1"></i> Curieux
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-3/5" data-aos="fade-left" data-aos-delay="300">
+                    <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8 card-hover border border-gray-100 dark:border-gray-700 relative">
+                        <div class="absolute -top-3 -right-3 w-12 h-12 bg-gradient-to-br from-primary-500 to-purple-500 rounded-xl flex items-center justify-center">
+                            <i class="fas fa-user text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-6 flex items-center">
+                            <i class="fas fa-user-graduate text-primary-500 mr-3"></i> Mon Parcours & Vision
+                        </h3>
+                        <div class="space-y-6">
+                            <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+                                Étudiant en <span class="font-semibold text-primary-600 dark:text-primary-400">Systèmes Informatiques et Logiciels</span>, 
+                                je me spécialise dans le développement d'applications web modernes et performantes. 
+                                Mon parcours académique et mes projets personnels m'ont permis d'acquérir une solide expertise 
+                                dans les technologies front-end et back-end.
+                            </p>
+                            <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+                                Maîtrisant plusieurs langages de programmation et frameworks modernes, je suis passionné par 
+                                la création d'expériences utilisateur fluides et de solutions techniques robustes. 
+                                Je parle couramment l'anglais, ce qui me permet de collaborer sur des projets internationaux 
+                                et de rester à jour avec les dernières avancées technologiques.
+                            </p>
+                            <div class="mt-8">
+                                <h4 class="text-xl font-bold text-gray-800 dark:text-white mb-6 flex items-center">
+                                    <i class="fas fa-rocket text-primary-500 mr-2"></i> Points clés
+                                </h4>
+                                <div class="space-y-4">
+                                    <div class="timeline-item">
+                                        <h5 class="font-semibold text-gray-800 dark:text-white mb-1">Formation en Systèmes Informatiques</h5>
+                                        <p class="text-gray-600 dark:text-gray-400 text-sm">Acquisition de compétences techniques solides en développement logiciel et architecture système</p>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <h5 class="font-semibold text-gray-800 dark:text-white mb-1">Développement Full-Stack</h5>
+                                        <p class="text-gray-600 dark:text-gray-400 text-sm">Expertise en création d'applications web complètes de A à Z</p>
+                                    </div>
+                                    <div class="timeline-item">
+                                        <h5 class="font-semibold text-gray-800 dark:text-white mb-1">Projets Concrets</h5>
+                                        <p class="text-gray-600 dark:text-gray-400 text-sm">Réalisation de sites et applications web fonctionnelles avec des technologies modernes</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="skills" class="py-20 bg-gray-50 dark:bg-gray-900 transition-colors relative overflow-hidden">
+        <div class="absolute inset-0 grid-pattern opacity-5"></div>
+        <div class="section-container relative z-10">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mb-4">Mes Compétences</h2>
+                <div class="w-24 h-1.5 bg-gradient-to-r from-primary-500 to-purple-500 mx-auto mb-6 rounded-full"></div>
+                <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto text-lg">
+                    Un panorama complet de mon expertise technique et des technologies que je maîtrise
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                <!-- Compétence 1 -->
+                <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6 card-hover border border-gray-100 dark:border-gray-700" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center mb-4">
+                        <div class="w-14 h-14 bg-gradient-to-br from-orange-100 to-orange-50 dark:from-orange-900/20 dark:to-orange-900/10 rounded-xl flex items-center justify-center mr-4">
+                            <i class="fab fa-html5 text-3xl text-orange-500"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800 dark:text-white">Frontend</h3>
+                            <p class="text-gray-500 dark:text-gray-400 text-sm">HTML5, CSS3, JavaScript</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">
+                        Création d'interfaces web modernes, responsives et accessibles avec les dernières normes et pratiques.
+                    </p>
+                    <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3 relative overflow-hidden">
+                        <div class="skill-bar bg-gradient-to-r from-orange-500 to-orange-400 h-3 rounded-full" data-width="85%"></div>
+                    </div>
+                    <div class="flex justify-between text-sm text-gray-500 dark:text-gray-400 mt-2">
+                        <span class="font-medium">85%</span>
+                        <span>Expert</span>
+                    </div>
+                </div>
+                <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6 card-hover border border-gray-100 dark:border-gray-700" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center mb-4">
+                        <div class="w-14 h-14 bg-gradient-to-br from-blue-100 to-blue-50 dark:from-blue-900/20 dark:to-blue-900/10 rounded-xl flex items-center justify-center mr-4">
+                            <i class="fas fa-server text-3xl text-blue-500"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800 dark:text-white">Backend</h3>
+                            <p class="text-gray-500 dark:text-gray-400 text-sm">Python, PHP, Bases de données</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">
+                        Développement de logique serveur, API RESTful et gestion de bases de données pour applications web.
+                    </p>
+                    <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3 relative overflow-hidden">
+                        <div class="skill-bar bg-gradient-to-r from-blue-500 to-blue-400 h-3 rounded-full" data-width="50%"></div>
+                    </div>
+                    <div class="flex justify-between text-sm text-gray-500 dark:text-gray-400 mt-2">
+                        <span class="font-medium">50%</span>
+                        <span>Avancé</span>
+                    </div>
+                </div>
+                <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6 card-hover border border-gray-100 dark:border-gray-700" data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex items-center mb-4">
+                        <div class="w-14 h-14 bg-gradient-to-br from-green-100 to-green-50 dark:from-green-900/20 dark:to-green-900/10 rounded-xl flex items-center justify-center mr-4">
+                            <i class="fas fa-code text-3xl text-green-500"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800 dark:text-white">C++ & Java</h3>
+                            <p class="text-gray-500 dark:text-gray-400 text-sm">Programmation orientée objet</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">
+                        Développement d'applications console, gestion de données et algorithmique avec C++ et Java.
+                    </p>
+                    <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3 relative overflow-hidden">
+                        <div class="skill-bar bg-gradient-to-r from-green-500 to-green-400 h-3 rounded-full" data-width="45%"></div>
+                    </div>
+                    <div class="flex justify-between text-sm text-gray-500 dark:text-gray-400 mt-2">
+                        <span class="font-medium">45%</span>
+                        <span>Avancé</span>
+                    </div>
+                </div>
+                <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6 card-hover border border-gray-100 dark:border-gray-700" data-aos="fade-up" data-aos-delay="400">
+                    <div class="flex items-center mb-4">
+                        <div class="w-14 h-14 bg-gradient-to-br from-yellow-100 to-yellow-50 dark:from-yellow-900/20 dark:to-yellow-900/10 rounded-xl flex items-center justify-center mr-4">
+                            <i class="fab fa-js text-3xl text-yellow-500"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800 dark:text-white">JavaScript</h3>
+                            <p class="text-gray-500 dark:text-gray-400 text-sm">ES6+, DOM, AJAX, Frameworks</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">
+                        Développement d'applications interactives et dynamiques avec JavaScript moderne et ses frameworks.
+                    </p>
+                    <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3 relative overflow-hidden">
+                        <div class="skill-bar bg-gradient-to-r from-yellow-500 to-yellow-400 h-3 rounded-full" data-width="35%"></div>
+                    </div>
+                    <div class="flex justify-between text-sm text-gray-500 dark:text-gray-400 mt-2">
+                        <span class="font-medium">35%</span>
+                        <span>Expert</span>
+                    </div>
+                </div>
+                <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6 card-hover border border-gray-100 dark:border-gray-700" data-aos="fade-up" data-aos-delay="500">
+                    <div class="flex items-center mb-4">
+                        <div class="w-14 h-14 bg-gradient-to-br from-purple-100 to-purple-50 dark:from-purple-900/20 dark:to-purple-900/10 rounded-xl flex items-center justify-center mr-4">
+                            <i class="fab fa-php text-3xl text-purple-500"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800 dark:text-white">PHP</h3>
+                            <p class="text-gray-500 dark:text-gray-400 text-sm">Backend, WordPress</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">
+                        Développement côté serveur pour applications web dynamiques avec PHP et intégration WordPress.
+                    </p>
+                    <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3 relative overflow-hidden">
+                        <div class="skill-bar bg-gradient-to-r from-purple-500 to-purple-400 h-3 rounded-full" data-width="55%"></div>
+                    </div>
+                    <div class="flex justify-between text-sm text-gray-500 dark:text-gray-400 mt-2">
+                        <span class="font-medium">55%</span>
+                        <span>Avancé</span>
+                    </div>
+                </div>
+                <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6 card-hover border border-gray-100 dark:border-gray-700" data-aos="fade-up" data-aos-delay="600">
+                    <div class="flex items-center mb-4">
+                        <div class="w-14 h-14 bg-gradient-to-br from-red-100 to-red-50 dark:from-red-900/20 dark:to-red-900/10 rounded-xl flex items-center justify-center mr-4">
+                            <i class="fab fa-git-alt text-3xl text-red-500"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-800 dark:text-white">Git & Versioning</h3>
+                            <p class="text-gray-500 dark:text-gray-400 text-sm">Git, GitHub, GitLab</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">
+                        Gestion de versions, collaboration en équipe et déploiement continu avec les outils Git.
+                    </p>
+                    <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3 relative overflow-hidden">
+                        <div class="skill-bar bg-gradient-to-r from-red-500 to-red-400 h-3 rounded-full" data-width="30%"></div>
+                    </div>
+                    <div class="flex justify-between text-sm text-gray-500 dark:text-gray-400 mt-2">
+                        <span class="font-medium">30%</span>
+                        <span>Expert</span>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-16" data-aos="fade-up">
+                <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-8 text-center">Technologies & Outils</h3>
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                    <div class="bg-white dark:bg-gray-800 px-5 py-4 rounded-xl shadow-md flex flex-col items-center card-hover border border-gray-100 dark:border-gray-700">
+                        <i class="fa-brands fa-figma text-3xl text-pink-500 mb-2"></i>
+                        <span class="font-medium text-gray-800 dark:text-white">Figma</span>
+                    </div>
+                    <div class="bg-white dark:bg-gray-800 px-5 py-4 rounded-xl shadow-md flex flex-col items-center card-hover border border-gray-100 dark:border-gray-700">
+                        <i class="fab fa-python text-3xl text-green-500 mb-2"></i>
+                        <span class="font-medium text-gray-800 dark:text-white">Python</span>
+                    </div>
+                    <div class="bg-white dark:bg-gray-800 px-5 py-4 rounded-xl shadow-md flex flex-col items-center card-hover border border-gray-100 dark:border-gray-700">
+                        <i class="fa-brands fa-wordpress text-3xl text-blue-600 mb-2"></i>
+                        <span class="font-medium text-gray-800 dark:text-white">WordPress</span>
+                    </div>
+                    <div class="bg-white dark:bg-gray-800 px-5 py-4 rounded-xl shadow-md flex flex-col items-center card-hover border border-gray-100 dark:border-gray-700">
+                        <i class="fa-solid fa-brain text-3xl text-purple-500 mb-2"></i>
+                        <span class="font-medium text-gray-800 dark:text-white">IA / AI</span>
+                    </div>
+                    <div class="bg-white dark:bg-gray-800 px-5 py-4 rounded-xl shadow-md flex flex-col items-center card-hover border border-gray-100 dark:border-gray-700">
+                        <i class="fas fa-database text-3xl text-blue-500 mb-2"></i>
+                        <span class="font-medium text-gray-800 dark:text-white">MySQL</span>
+                    </div>
+                    <div class="bg-white dark:bg-gray-800 px-5 py-4 rounded-xl shadow-md flex flex-col items-center card-hover border border-gray-100 dark:border-gray-700">
+                        <i class="fab fa-git-alt text-3xl text-orange-600 mb-2"></i>
+                        <span class="font-medium text-gray-800 dark:text-white">Git</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="projects" class="py-20 bg-white dark:bg-dark transition-colors relative overflow-hidden">
+        <div class="absolute inset-0 grid-pattern opacity-5"></div>
+        <div class="section-container relative z-10">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mb-4">Mes Projets</h2>
+                <div class="w-24 h-1.5 bg-gradient-to-r from-primary-500 to-purple-500 mx-auto mb-6 rounded-full"></div>
+                <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto text-lg">
+                    Découvrez une sélection de mes réalisations en développement web et logiciel
+                </p>
+            </div>
+            <div class="flex flex-wrap justify-center gap-3 mb-12" data-aos="fade-up" data-aos-delay="200">
+                <button class="px-5 py-2 bg-primary-100 dark:bg-primary-900/30 text-primary-800 dark:text-primary-300 rounded-full font-medium transition-all hover:bg-primary-200 dark:hover:bg-primary-800/50 active-filter" data-filter="all">Tous</button>
+                <button class="px-5 py-2 bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-300 rounded-full font-medium transition-all hover:bg-gray-200 dark:hover:bg-gray-700" data-filter="web">Web</button>
+                <button class="px-5 py-2 bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-300 rounded-full font-medium transition-all hover:bg-gray-200 dark:hover:bg-gray-700" data-filter="c++">C++</button>
+                <button class="px-5 py-2 bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-300 rounded-full font-medium transition-all hover:bg-gray-200 dark:hover:bg-gray-700" data-filter="fullstack">Full-Stack</button>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+                <div class="project-card bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden card-hover border border-gray-100 dark:border-gray-700" data-category="web" data-aos="fade-up" data-aos-delay="100">
+                    <div class="h-48 relative overflow-hidden">
+                        <img src="https://www.le-t-shirt.com/storage/650525/conversions/exprimez-votre-style-avec-un-tee-shirt-personnalise-brode-unique-teaser.webp" 
+                             alt="Boutique en ligne T-shirts"
+                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                        <div class="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                            <i class="fas fa-circle text-xs mr-1 animate-pulse"></i> En ligne
+                        </div>
+                        <div class="absolute bottom-4 left-4 text-white">
+                            <h3 class="text-xl font-bold">Boutique en ligne</h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-bold text-gray-800 dark:text-white">Boutique en ligne T-shirts</h3>
+                            <span class="text-xs px-2 py-1 bg-primary-100 dark:bg-primary-900/30 text-primary-800 dark:text-primary-300 rounded-full">Web</span>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            Plateforme e-commerce spécialisée avec catalogue produit, formulaire de commande avancé et gestion des demandes clients.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 text-sm rounded-full">HTML/CSS</span>
+                            <span class="px-3 py-1 bg-yellow-100 dark:bg-yellow-900/30 text-yellow-800 dark:text-yellow-300 text-sm rounded-full">JavaScript</span>
+                            <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-300 text-sm rounded-full">Form-Submit</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <a href="https://shop-store-t-shirt.netlify.app/" target="_blank" class="btn-primary text-white font-semibold px-4 py-2 rounded-lg text-sm flex-1 text-center group">
+                                <i class="fas fa-external-link-alt mr-2 group-hover:rotate-12 transition-transform"></i>Voir le projet
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden card-hover border border-gray-100 dark:border-gray-700" data-category="web" data-aos="fade-up" data-aos-delay="200">
+                    <div class="h-48 relative overflow-hidden">
+                        <img src="https://www.tresor.economie.gouv.fr/PagesInternationales/CG/images/visuel?pageType=Pays&isPreview=False" 
+                             alt="Découvrir le Congo"
+                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                        <div class="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                            <i class="fas fa-circle text-xs mr-1 animate-pulse"></i> En ligne
+                        </div>
+                        <div class="absolute bottom-4 left-4 text-white">
+                            <h3 class="text-xl font-bold">Découvrir le Congo</h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-bold text-gray-800 dark:text-white">Découvrir le Congo</h3>
+                            <span class="text-xs px-2 py-1 bg-primary-100 dark:bg-primary-900/30 text-primary-800 dark:text-primary-300 rounded-full">Web</span>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            Site web présentant la culture, l'histoire et les attractions touristiques du Congo-Brazzaville avec design moderne et responsive.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 text-sm rounded-full">HTML/CSS</span>
+                            <span class="px-3 py-1 bg-yellow-100 dark:bg-yellow-900/30 text-yellow-800 dark:text-yellow-300 text-sm rounded-full">JavaScript</span>
+                            <span class="px-3 py-1 bg-cyan-100 dark:bg-cyan-900/30 text-cyan-800 dark:text-cyan-300 text-sm rounded-full">Tailwind CSS</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <a href="https://congobrazzaville.netlify.app/" target="_blank" class="btn-primary text-white font-semibold px-4 py-2 rounded-lg text-sm flex-1 text-center group">
+                                <i class="fas fa-external-link-alt mr-2 group-hover:rotate-12 transition-transform"></i>Voir le projet
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden card-hover border border-gray-100 dark:border-gray-700" data-category="web" data-aos="fade-up" data-aos-delay="300">
+                    <div class="h-48 relative overflow-hidden">
+                        <img src="https://www.tourmag.com/photo/art/grande/76836533-55389305.jpg?v=1700573972" 
+                             alt="Agence de voyage"
+                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                        <div class="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                            <i class="fas fa-circle text-xs mr-1 animate-pulse"></i> En ligne
+                        </div>
+                        <div class="absolute bottom-4 left-4 text-white">
+                            <h3 class="text-xl font-bold">Agence de voyage</h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-bold text-gray-800 dark:text-white">Agence de voyage Campus France</h3>
+                            <span class="text-xs px-2 py-1 bg-primary-100 dark:bg-primary-900/30 text-primary-800 dark:text-primary-300 rounded-full">Web</span>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            Site web pour une agence accompagnant les étudiants dans leurs démarches Campus France avec gestion de dossiers et contact direct.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 text-sm rounded-full">HTML/CSS</span>
+                            <span class="px-3 py-1 bg-yellow-100 dark:bg-yellow-900/30 text-yellow-800 dark:text-yellow-300 text-sm rounded-full">JavaScript</span>
+                            <span class="px-3 py-1 bg-cyan-100 dark:bg-cyan-900/30 text-cyan-800 dark:text-cyan-300 text-sm rounded-full">Tailwind CSS</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <a href="https://monsitewebagence.free.nf/" target="_blank" class="btn-primary text-white font-semibold px-4 py-2 rounded-lg text-sm flex-1 text-center group">
+                                <i class="fas fa-external-link-alt mr-2 group-hover:rotate-12 transition-transform"></i>Voir le projet
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden card-hover border border-gray-100 dark:border-gray-700" data-category="fullstack" data-aos="fade-up" data-aos-delay="400">
+                    <div class="h-48 relative overflow-hidden">
+                        <img src="https://www.mediaterre.org/users/Redaction_Mediaterre/images/learn-36534301920.jpg" 
+                             alt="Plateforme éducative"
+                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                        <div class="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                            <i class="fas fa-circle text-xs mr-1 animate-pulse"></i> En ligne
+                        </div>
+                        <div class="absolute bottom-4 left-4 text-white">
+                            <h3 class="text-xl font-bold">Plateforme éducative</h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-bold text-gray-800 dark:text-white">Plateforme éducative Easy Courses</h3>
+                            <span class="text-xs px-2 py-1 bg-primary-100 dark:bg-primary-900/30 text-primary-800 dark:text-primary-300 rounded-full">Full-Stack</span>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            Système de gestion de cours en ligne avec dépôt de documents, communication enseignants-élèves et organisation par matière.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 text-sm rounded-full">HTML/CSS</span>
+                            <span class="px-3 py-1 bg-yellow-100 dark:bg-yellow-900/30 text-yellow-800 dark:text-yellow-300 text-sm rounded-full">JavaScript</span>
+                            <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-300 text-sm rounded-full">PHP</span>
+                            <span class="px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300 text-sm rounded-full">MySQL</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <a href="https://easy-courses.infinityfreeapp.com" target="_blank" class="btn-primary text-white font-semibold px-4 py-2 rounded-lg text-sm flex-1 text-center group">
+                                <i class="fas fa-external-link-alt mr-2 group-hover:rotate-12 transition-transform"></i>Voir le projet
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden card-hover border border-gray-100 dark:border-gray-700" data-category="c++" data-aos="fade-up" data-aos-delay="500">
+                    <div class="h-48 relative overflow-hidden">
+                        <img src="img-c++.png" 
+                             alt="Application C++"
+                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                        <div class="absolute top-4 right-4 bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                            <i class="fas fa-code mr-1"></i> Code source
+                        </div>
+                        <div class="absolute bottom-4 left-4 text-white">
+                            <h3 class="text-xl font-bold">Application C++</h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-bold text-gray-800 dark:text-white">Gestion d'étudiants en C++</h3>
+                            <span class="text-xs px-2 py-1 bg-primary-100 dark:bg-primary-900/30 text-primary-800 dark:text-primary-300 rounded-full">C++</span>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            Application console en C++ pour la gestion des étudiants, calcul des moyennes et détermination de l'admission avec interface interactive.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 text-sm rounded-full">C++</span>
+                            <span class="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-300 text-sm rounded-full">POO</span>
+                            <span class="px-3 py-1 bg-cyan-100 dark:bg-cyan-900/30 text-cyan-800 dark:text-cyan-300 text-sm rounded-full">Console</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <a href="https://drive.google.com/drive/folders/1NicNQYggHsBrj1I6oIe3oas3yOZnAw6C?usp=drive_linkr" target="_blank" class="btn-primary text-white font-semibold px-4 py-2 rounded-lg text-sm flex-1 text-center group">
+                            <i class="fab fa-google-drive mr-2 group-hover:rotate-12 transition-transform"></i>Voir le code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden card-hover border border-gray-100 dark:border-gray-700" data-category="web" data-aos="fade-up" data-aos-delay="600">
+                    <div class="h-48 relative overflow-hidden">
+                        <img src="https://upload.wikimedia.org/wikipedia/fr/7/79/Logo_QPUC_2016.jpg" 
+                             alt="Quiz éducatif"
+                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                        <div class="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                            <i class="fas fa-circle text-xs mr-1 animate-pulse"></i> En ligne
+                        </div>
+                        <div class="absolute bottom-4 left-4 text-white">
+                            <h3 class="text-xl font-bold">Quiz éducatif</h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-bold text-gray-800 dark:text-white">Quiz éducatif interactif</h3>
+                            <span class="text-xs px-2 py-1 bg-primary-100 dark:bg-primary-900/30 text-primary-800 dark:text-primary-300 rounded-full">Web</span>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            Application web de quiz inspirée de "Questions pour un champion" avec système de score, timer et questions variées.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 text-sm rounded-full">HTML/CSS</span>
+                            <span class="px-3 py-1 bg-yellow-100 dark:bg-yellow-900/30 text-yellow-800 dark:text-yellow-300 text-sm rounded-full">JavaScript</span>
+                            <span class="px-3 py-1 bg-cyan-100 dark:bg-cyan-900/30 text-cyan-800 dark:text-cyan-300 text-sm rounded-full">Tailwind CSS</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <a href="https://answers-games.netlify.app/" target="_blank" class="btn-primary text-white font-semibold px-4 py-2 rounded-lg text-sm flex-1 text-center group">
+                                <i class="fas fa-external-link-alt mr-2 group-hover:rotate-12 transition-transform"></i>Voir le projet
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden card-hover border border-gray-100 dark:border-gray-700" data-category="web" data-aos="fade-up" data-aos-delay="600">
+                    <div class="h-48 relative overflow-hidden">
+                        <img src="https://cdn.dribbble.com/userupload/16241470/file/original-e69649e67ba57753f2b71c9087a7d468.jpg?format=webp&resize=400x300&vertical=center" 
+                             alt="Gestion de conges"
+                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                        <div class="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                            <i class="fas fa-code mr-1"></i> Code source
+                        </div>
+                        <div class="absolute bottom-4 left-4 text-white">
+                            <h3 class="text-xl font-bold">Développeur Frontend – PORTAIL RH</h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-bold text-gray-800 dark:text-white">Création d’Interfaces Fluides</h3>
+                            <span class="text-xs px-2 py-1 bg-primary-100 dark:bg-primary-900/30 text-primary-800 dark:text-primary-300 rounded-full">Web</span>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            Dans le projet PORTAIL RH, j’ai développé les interfaces frontend : page de connexion, tableau de bord, formulaires de demandes et espace admin. J’ai conçu une interface claire, professionnelle et intuitive, optimisée UI/UX et facilement intégrable avec le backend.                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 text-sm rounded-full">HTML/CSS</span>
+                            <span class="px-3 py-1 bg-yellow-100 dark:bg-yellow-900/30 text-yellow-800 dark:text-yellow-300 text-sm rounded-full">JavaScript</span>
+                            <span class="px-3 py-1 bg-cyan-100 dark:bg-cyan-900/30 text-cyan-800 dark:text-cyan-300 text-sm rounded-full">Tailwind CSS</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <a href="https://gitlab.com/kouandzijunior1/projet-web/-/tree/master?ref_type=heads" target="_blank" class="btn-primary text-white font-semibold px-4 py-2 rounded-lg text-sm flex-1 text-center group">
+                                <i class="fab fa-gitlab mr-2 group-hover:rotate-12 transition-transform"></i>Voir le code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden card-hover border border-gray-100 dark:border-gray-700" data-category="web" data-aos="fade-up" data-aos-delay="600">
+                    <div class="h-48 relative overflow-hidden">
+                        <img src="https://image.lecourrier.vn/MediaUpload/Org/2023/02/12/144710-2.jpg" 
+                             alt="Site Web Innovant avec IA"
+                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                        <div class="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                            <i class="fas fa-circle text-xs mr-1 animate-pulse"></i> En ligne
+                        </div>
+                        <div class="absolute bottom-4 left-4 text-white">
+                            <h3 class="text-xl font-bold">Site Web Innovant avec IA</h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-bold text-gray-800 dark:text-white">Design Web Intuitif</h3>
+                            <span class="text-xs px-2 py-1 bg-primary-100 dark:bg-primary-900/30 text-primary-800 dark:text-primary-300 rounded-full">Web</span>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            J’ai développé un site web pour NexusLab en utilisant l’IA pour optimiser le développement et le design. Le site présente l’innovation en informatique quantique, cybersécurité et intelligence artificielle avec une interface moderne, fluide et interactive, tout en suivant les bonnes pratiques UI/UX pour un code structuré et maintenable.                             <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 text-sm rounded-full">Vibe Coding</span>
+                            <span class="px-3 py-1 bg-yellow-100 dark:bg-yellow-900/30 text-yellow-800 dark:text-yellow-300 text-sm rounded-full">HTML/CSS</span>
+                            <span class="px-3 py-1 bg-cyan-100 dark:bg-cyan-900/30 text-cyan-800 dark:text-cyan-300 text-sm rounded-full">Tailwind CSS</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <a href="https://labo-science.netlify.app/" target="_blank" class="btn-primary text-white font-semibold px-4 py-2 rounded-lg text-sm flex-1 text-center group">
+                                <i class="fas fa-external-link-alt mr-2 group-hover:rotate-12 transition-transform"></i>Voir le projet
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden card-hover border border-gray-100 dark:border-gray-700" data-category="web" data-aos="fade-up" data-aos-delay="600">
+                    <div class="h-48 relative overflow-hidden">
+                        <img src="https://static0.makeuseofimages.com/wordpress/wp-content/uploads/wm/2023/06/crud.jpg?w=1200&h=628&fit=crop" 
+                             alt="Gestion de conges"
+                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                            <div class="absolute top-4 right-4 bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                            <i class="fas fa-code mr-1"></i> Code source
+                        </div>
+                        <div class="absolute bottom-4 left-4 text-white">
+                            <h3 class="text-xl font-bold">Application CRUD Django</h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-bold text-gray-800 dark:text-white">Application CRUD Djangos</h3>
+                            <span class="text-xs px-2 py-1 bg-primary-100 dark:bg-primary-900/30 text-primary-800 dark:text-primary-300 rounded-full">Web</span>
+                        </div>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            J’ai développé une application CRUD avec Django, permettant de Créer, Lire, Mettre à jour et Supprimer des données. L’application combine une interface claire, des formulaires sécurisés, et une gestion efficace de la base de données, en suivant les bonnes pratiques Django pour un code modulaire et maintenable.                             <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 text-sm rounded-full">Python/Django</span>
+                            <span class="px-3 py-1 bg-cyan-100 dark:bg-cyan-900/30 text-cyan-800 dark:text-cyan-300 text-sm rounded-full">DaisyUI</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <a href="https://gitlab.com/kouandzijunior1/projet-django-crud/-/tree/master?ref_type=heads" target="_blank" class="btn-primary text-white font-semibold px-4 py-2 rounded-lg text-sm flex-1 text-center group">
+                                <i class="fab fa-gitlab mr-2 group-hover:rotate-12 transition-transform"></i>Voir le code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-16" data-aos="fade-up">
+                <div class="bg-gradient-to-r from-blue-50 to-cyan-50 dark:from-gray-800 dark:to-gray-900 rounded-2xl p-8 max-w-2xl mx-auto border border-gray-100 dark:border-gray-700 card-hover relative overflow-hidden">
+                    <div class="absolute -top-20 -right-20 w-40 h-40 bg-gradient-to-br from-primary-500/10 to-purple-500/10 rounded-full"></div>
+                    <div class="absolute -bottom-20 -left-20 w-40 h-40 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-full"></div>
+                    
+                    <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-4 relative z-10">Vous avez un projet en tête ?</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6 relative z-10">
+                        Je suis toujours ouvert à de nouvelles collaborations et défis techniques. N'hésitez pas à me contacter pour discuter de votre projet.
+                    </p>
+                    <a href="#contact" class="btn-primary text-white font-semibold px-8 py-3 rounded-lg inline-flex items-center relative z-10 group">
+                        <i class="fas fa-paper-plane mr-3 group-hover:translate-x-1 transition-transform"></i>Discutons de votre projet
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+<section id="contact" class="py-20 bg-gray-50 dark:bg-gray-900 transition-colors relative overflow-hidden">
+    <div class="absolute inset-0 grid-pattern opacity-5"></div>
+    <div class="section-container relative z-10">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mb-4">Contactez-moi</h2>
+            <div class="w-24 h-1.5 bg-gradient-to-r from-green-500 to-primary-500 mx-auto mb-6 rounded-full"></div>
+            <p class="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto text-lg">
+                Envoyez-moi un message directement via WhatsApp pour une réponse rapide !
+            </p>
+        </div>
+        <div class="flex flex-col lg:flex-row gap-12">
+            <div class="lg:w-2/5" data-aos="fade-right">
+                <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8 card-hover border border-gray-100 dark:border-gray-700">
+                    <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-6 flex items-center">
+                        <i class="fas fa-comments text-primary-500 mr-3"></i> Travaillons ensemble
+                    </h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="w-14 h-14 bg-gradient-to-br from-green-100 to-green-50 dark:from-green-900/20 dark:to-green-900/10 rounded-xl flex items-center justify-center mr-4">
+                                <i class="fab fa-whatsapp text-green-500 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 dark:text-white text-lg">WhatsApp</h4>
+                                <p class="text-gray-600 dark:text-gray-300">+229 57 83 26 77</p>
+                                <a href="https://wa.me/22957832677?text=Bonjour%20Junior,%20je%20suis%20intéressé%20par%20vos%20services" 
+                                   target="_blank"
+                                   class="text-green-600 dark:text-green-400 text-sm hover:underline flex items-center mt-1">
+                                    <i class="fab fa-whatsapp mr-2"></i> Écrire sur WhatsApp
+                                </a>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-14 h-14 bg-gradient-to-br from-primary-100 to-primary-50 dark:from-primary-900/20 dark:to-primary-900/10 rounded-xl flex items-center justify-center mr-4">
+                                <i class="fas fa-envelope text-primary-500 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 dark:text-white text-lg">Email</h4>
+                                <p class="text-gray-600 dark:text-gray-300">kouandzijunior1@gmail.com</p>
+                                <a href="mailto:kouandzijunior1@gmail.com" class="text-primary-600 dark:text-primary-400 text-sm hover:underline flex items-center mt-1">
+                                    <i class="fas fa-paper-plane mr-2"></i> Envoyer un email
+                                </a>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-14 h-14 bg-gradient-to-br from-blue-100 to-blue-50 dark:from-blue-900/20 dark:to-blue-900/10 rounded-xl flex items-center justify-center mr-4">
+                                <i class="fas fa-map-marker-alt text-blue-500 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 dark:text-white text-lg">Localisation</h4>
+                                <p class="text-gray-600 dark:text-gray-300">Porto-Novo, Benin</p>
+                                <p class="text-gray-500 dark:text-gray-400 text-sm mt-1 flex items-center">
+                                    <i class="fas fa-globe-americas mr-2"></i> Disponible pour projets à distance
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8 pt-6 border-t border-gray-100 dark:border-gray-700">
+                        <h4 class="font-semibold text-gray-800 dark:text-white mb-4 text-lg flex items-center">
+                            <i class="fas fa-share-alt mr-2"></i> Réseaux sociaux
+                        </h4>
+                        <div class="flex space-x-4">
+                            <a href="https://github.com/junior-glishe" target="_blank" class="w-14 h-14 bg-gray-100 dark:bg-gray-700 rounded-xl flex items-center justify-center hover:bg-gray-800 hover:text-white transition-all card-hover group">
+                                <i class="fab fa-github text-2xl group-hover:scale-110 transition-transform"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/junior-kouandzi-3a67ab36b/" target="_blank" class="w-14 h-14 bg-gray-100 dark:bg-gray-700 rounded-xl flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all card-hover group">
+                                <i class="fab fa-linkedin-in text-2xl group-hover:scale-110 transition-transform"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="lg:w-3/5" data-aos="fade-left" data-aos-delay="300">
+                <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8 card-hover border border-gray-100 dark:border-gray-700">
+                    <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-6 flex items-center">
+                        <i class="fab fa-whatsapp text-green-500 mr-3"></i> Envoyez-moi un message via WhatsApp
+                    </h3>            
+                    <form id="whatsappForm" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="whatsappName" class="block text-gray-700 dark:text-gray-300 mb-2 font-medium">Nom complet *</label>
+                                <input type="text" id="whatsappName" name="name" required 
+                                       class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent dark:bg-gray-700 dark:text-white transition-colors"
+                                       placeholder="Votre nom">
+                            </div>
+                            <div>
+                                <label for="whatsappEmail" class="block text-gray-700 dark:text-gray-300 mb-2 font-medium">Adresse email</label>
+                                <input type="email" id="whatsappEmail" name="email" 
+                                       class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent dark:bg-gray-700 dark:text-white transition-colors"
+                                       placeholder="votre@email.com">
+                            </div>
+                        </div>                       
+                        <div>
+                            <label for="whatsappSubject" class="block text-gray-700 dark:text-gray-300 mb-2 font-medium">Sujet *</label>
+                            <select id="whatsappSubject" name="subject" required 
+                                    class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent dark:bg-gray-700 dark:text-white transition-colors">
+                                <option value="" disabled selected>Sélectionnez un sujet</option>
+                                <option value="Projet web">Projet web</option>
+                                <option value="Développement d'application">Développement d'application</option>
+                                <option value="Consultation">Consultation</option>
+                                <option value="Collaboration">Collaboration</option>
+                                <option value="Emploi/Stage">Emploi/Stage</option>
+                                <option value="Autre">Autre</option>
+                            </select>
+                        </div>                       
+                        <div>
+                            <label for="whatsappMessage" class="block text-gray-700 dark:text-gray-300 mb-2 font-medium">Message *</label>
+                            <textarea id="whatsappMessage" name="message" rows="5" required 
+                                      class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent dark:bg-gray-700 dark:text-white transition-colors resize-none"
+                                      placeholder="Décrivez votre projet ou votre demande..."></textarea>
+                        </div>                        
+                        <div class="bg-green-50 dark:bg-green-900/20 p-4 rounded-lg border border-green-100 dark:border-green-800">
+                            <div class="flex items-start">
+                                <i class="fab fa-whatsapp text-green-600 dark:text-green-400 text-xl mt-1 mr-3"></i>
+                                <div>
+                                    <p class="text-green-800 dark:text-green-300 text-sm">
+                                        En soumettant ce formulaire, vous serez redirigé vers WhatsApp pour envoyer votre message directement.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>                       
+                        <button type="submit" class="btn-whatsapp bg-green-600 hover:bg-green-700 text-white font-semibold px-8 py-3 rounded-lg w-full group">
+                            <i class="fab fa-whatsapp mr-3 group-hover:scale-110 transition-transform"></i>Envoyer via WhatsApp
+                        </button>
+                    </form>                    
+                    <div class="mt-6 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-100 dark:border-blue-800">
+                        <div class="flex items-start">
+                            <i class="fas fa-info-circle text-blue-600 dark:text-blue-400 text-xl mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-semibold text-blue-800 dark:text-blue-300 text-sm mb-1">Note importante</h4>
+                                <p class="text-blue-700 dark:text-blue-400 text-sm">
+                                    Assurez-vous d'avoir WhatsApp installé sur votre appareil. Le message sera envoyé au numéro +229 57 83 26 77.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="section-container">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0 text-center md:text-left">
+                    <a href="#" class="text-2xl font-bold text-white flex items-center justify-center md:justify-start">
+                        <i class="fas fa-code mr-2 text-primary-400"></i>
+                        <span class="gradient-text">Junior</span><span class="font-extrabold">Dev</span>
+                    </a>
+                    <p class="mt-2 text-gray-400 max-w-md">
+                        Développeur Full-Stack passionné par la création de solutions web innovantes et performantes.
+                    </p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#about" class="text-gray-400 hover:text-white transition-colors hover:underline">À propos</a>
+                    <a href="#skills" class="text-gray-400 hover:text-white transition-colors hover:underline">Compétences</a>
+                    <a href="#projects" class="text-gray-400 hover:text-white transition-colors hover:underline">Projets</a>
+                    <a href="#contact" class="text-gray-400 hover:text-white transition-colors hover:underline">Contact</a>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; <span id="currentYear"></span> Junior Miette Kouandzi. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script src="formulaire.js"></script>
+</body>
+</html>
